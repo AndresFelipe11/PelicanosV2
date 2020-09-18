@@ -31,5 +31,16 @@
     "connector": "loopback-component-storage",
     "provider": "fileSystem",
     "root": "./server/files"
+  },
+  "pelicanosDatasource": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "pelicanosMongoDB",
+    "password": "",
+    "name": "pelicanosDatasource",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
   }
 }

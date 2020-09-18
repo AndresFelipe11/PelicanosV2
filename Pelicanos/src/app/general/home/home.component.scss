@@ -1,0 +1,44 @@
+.title {
+    color: black;
+  }
+  .subtitle {
+    color: black;
+  }
+  .hero {
+    color: #eeeeee;
+  }
+  
+  #title {
+    color: black;
+  }
+  
+  #subtitle {
+    color: black;
+  }
+  
+  .hero.video {
+    background-image: url("../../../assets/image/4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .hero-body.main-hero {
+    color: #363636;
+  
+    h1,
+    h2 {
+      color: #363636;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .hero-body.main-hero {
+      color: rgb(88, 88, 80);
+  
+      h1,
+      h2 {
+        color: rgb(88, 88, 80);
+      }
+    }
+  }

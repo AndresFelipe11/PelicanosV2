@@ -1,0 +1,35 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://localhost:27017/pelicanosMongoDB",
+    "database": "pelicanosMongoDB",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  },
+  "Email": {
+    "name": "Email",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "auth": {
+          "user": "pelicanosweb@gmail.com",
+          "pass": "Test-1234"
+        }
+      }
+    ]
+  },
+  "UploadFiles": {
+    "name": "UploadFiles",
+    "connector": "loopback-component-storage",
+    "provider": "fileSystem",
+    "root": "./server/files"
+  }
+}

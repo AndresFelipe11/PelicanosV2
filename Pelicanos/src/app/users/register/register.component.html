@@ -1,4 +1,106 @@
-<form [formGroup]="userFormGroup" (ngSubmit)="saveNewUser()">
+<div class="section">
+
+
+ 
+
+  <div class="container">
+    <div class="box">
+      <h4 class="title is-3 has-text-centered">Registrarse</h4>
+      <form [formGroup]="userFormGroup" (ngSubmit)="saveNewUser()">
+        <div class="form-group">
+          <div class="columns">
+            <div class="column ">
+              <div class="field ">
+                <p class="control has-icons-left">
+                  <input class="input" formControlName="realm" id="realm" type="text"
+                    placeholder="Nombres" name="realm">
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" formControlName="username" id="username" type="text" placeholder="Apellidos">
+                </p>
+              </div>
+            </div>
+            <div class="column ">
+              <div class="field ">
+                <p class="control has-icons-left">
+                  <input class="input" formControlName="id" id="id" type="text"
+                    placeholder="Cedula" name="id">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column ">
+              <div class="field ">
+                <p class="control has-icons-left">
+                  <input class="input" formControlName="email" id="email" type="text"
+                    placeholder="Email" name="email">
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" formControlName="password" id="password" type="password" placeholder="Contraseña">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field has-addons has-addons-centered">
+            <p class="control">
+              <button class="button is-success" type="submit">
+                Sign up
+              </button> 
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- STARS -->
+
+  <div class="night">
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form [formGroup]="userFormGroup" (ngSubmit)="saveNewUser()">
   <div class="row">
     <div class="input-field hoverable col s6">
       <i class="material-icons prefix">contacts</i>
@@ -92,4 +194,4 @@
   </div>
   <button class="waves-effect waves-ligth btn green" type="submit">
     <i class="material-icons right">done</i>
-    registrarme</button>
+    registrarme</button> -->

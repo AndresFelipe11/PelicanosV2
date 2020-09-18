@@ -44,5 +44,6 @@ module.exports = function(Player) {
         ],
         returns: { arg: 'Email', type: 'string' }
     });
+  };
 
-};
+

@@ -1,26 +1,35 @@
-<nav>
-    <strong *ngIf="userLogged"></strong>
-    <div class="nav-wrapper blue">
-        <a href="/home" class="brand-logo center">Pelicanos</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="left hide-on-med-and-down">
-            <li><a href="/player/view">Players</a></li>
-            <li *ngIf="userLogged"><a href="/player/list">Players list</a></li>
-        </ul>
-        <ul class="right hide-on-med-and-down">
-            <li *ngIf="!userLogged"><a href="/user/login">Iniciar Sesión</a></li>
-            <li *ngIf="!userLogged"><a href="/user/register">Registrarse</a></li>
-            <li *ngIf="userLogged"><a href="/user/logout">Cerrar Sesión</a></li>
-            <li>
-                <div *ngIf="userLogged">
-                    <strong>En session {{CompleteName}}</strong>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <strong *ngIf="userLogged"></strong>
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="/">
+      <h3 class="title is-3">PELICANOS</h3>
+    </a>
 
-<ul class="sidenav" id="mobile-hotel">
-    <li><a *ngIf="!userLogged" href="/security/login">Login</a></li>
-    <li><a *ngIf="userLogged" href="/security/logout">Logout</a></li>
-</ul>
+    <a role="button" class="navbar-burger burger">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="navbar-item" *ngIf="!userLogged" routerLink="/user/register" routerLinkActive="is-active">
+            <strong>Registrarse</strong>
+          </a>
+          <a class="navbar-item" *ngIf="!userLogged" routerLink="/user/login" routerLinkActive="is-active">
+            Iniciar Sesión
+          </a>
+          <a class="navbar-item" *ngIf="userLogged" routerLink="/user/logout" routerLinkActive="is-active">
+            Cerrar Sesión
+          </a>
+          <div class="buttons" *ngIf="userLogged">
+            <a routerLink="/player/list" class="navbar-item">Lista Jugadores</a>
+            <a routerLink="/player/view" class="navbar-item">Jugadores</a>
+          </div>         
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

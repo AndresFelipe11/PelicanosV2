@@ -1,4 +1,128 @@
-<div class="row">
+<section>
+    <div class="container">
+        <div class="box">
+            <h4 class="title is-4">Jugador</h4>
+
+            <div class="column is-6 field">
+                <label class="label">Nombre</label>
+                <div class="control">
+                    <input [(ngModel)]="player.name" id="name" name="name" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Apellido</label>
+                <div class="control">
+                    <input [(ngModel)]="player.lastname" id="lastname" name="lastname" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Cedula</label>
+                <div class="control">
+                    <input [(ngModel)]="player.code" id="code" name="code" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input [(ngModel)]="player.email" id="email" name="email" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Rol</label>
+                <div class="control">
+                    <input [(ngModel)]="player.rol" id="rol" name="rol" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Telefono</label>
+                <div class="control">
+                    <input [(ngModel)]="player.phone" id="phone" name="phone" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Age</label>
+                <div class="control">
+                    <input [(ngModel)]="player.age" id="age" name="age" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Peso</label>
+                <div class="control">
+                    <input [(ngModel)]="player.weigth" id="weigth" name="weigth" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Estatura</label>
+                <div class="control">
+                    <input [(ngModel)]="player.height" id="height" name="height" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Fortalezas</label>
+                <div class="control">
+                    <input [(ngModel)]="player.strengths" id="strengths" name="strengths" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">Red Social</label>
+                <div class="control">
+                    <input [(ngModel)]="player.link" id="link" name="link" class="input" type="text" />
+                </div>
+            </div>
+            <div class="column is-6 field">
+                <label class="label">imagen</label>
+                <div class="control">
+                    <input [(ngModel)]="player.image" id="image" name="image" class="input" type="text" />
+                </div>
+            </div>
+
+
+
+            <div class="field column is-12 has-text-centered">
+                <button class="button is-success" (click)="updatePlayer()">
+                    Guardar
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- STARS -->
+
+    <div class="night">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+</section>
+
+
+<!-- <div class="row">
     <input [(ngModel)]="player.id" type="hidden" id="id"/>
     <div class="row">
         <div class="input-fiel col s4">
@@ -67,4 +191,4 @@
                 Actualizar</a>
         </div>
     </div>
-</div>
+</div> -->

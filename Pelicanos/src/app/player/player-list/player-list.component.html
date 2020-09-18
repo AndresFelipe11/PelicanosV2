@@ -1,8 +1,13 @@
+
+<section>
+    <div class="container">
+
+
 <br/>
 <a class="waves-effect waves-light btn-small green" href="/player/creator">
     <i class="material-icons right">add</i>Añadir nuevo jugador</a>
 <br/>
-<table>
+<table class="table is-striped is-fullwidth">
     <thead>
         <tr>
             <th>
@@ -53,7 +58,7 @@
     <tbody>
         <tr *ngFor="let p of PlayerList | paginate: { itemsPerPage: 10, currentPage: p }">
             <td>
-                <img class="activator" src="{{p.image}}">
+                <img class="activator" width="50px" height="200px" src="{{p.image}}">
             </td>
             <td>
                 {{p.name}}
@@ -80,7 +85,7 @@
                 {{p.weigth}}
             </td>
             <td>
-                {{p.heigth}}
+                {{p.height}}
             </td>
             <td>
                 {{p.titles}}
@@ -92,23 +97,26 @@
                 {{p.link}}
             </td>
             <td>
-                <a class="waves-effect waves-light btn-small blue" href="/player/editor/{{p.id}}">
-                    <i class="material-icons right">edit</i>Editar
-                    </a>
+                <a class="button is-primary" href="/player/editor/{{p.id}}">
+                    Editar
+                </a>
             </td>
             <td>
-                <a *ngIf="!showConfirmationButtons; else deleteConfirmationTemplate" (click)="ChangeConfirmationButtons(p.id)" class="waves-effect waves-light btn-small red">
-                    <i class="material-icons right">delete</i>Eliminar</a>
+                <button *ngIf="!showConfirmationButtons; else deleteConfirmationTemplate" (click)="ChangeConfirmationButtons(p.id)" class="button is-danger">
+                    Eliminar</button>
                    <ng-template #deleteConfirmationTemplate>
                     <div *ngIf="idToShowButtons == p.id">
-                        <a class="waves-effect waves-light btn-small red" (click)="deletePlayer(p.id)">
-                            <i class="material-icons right">delete</i>Eliminar</a>&nbsp;
-                            <a class="waves-effect waves-light btn-small green" (click)="ChangeConfirmationButtons('')">
-                                <i class="material-icons right">cancel</i>Cancelar</a>
+                        <button class="button is-danger" (click)="deletePlayer(p.id)">
+                            Eliminar</button>&nbsp;
+                            <button class="button is-success" (click)="ChangeConfirmationButtons('')">
+                               Cancelar</button>
                     </div>
                    </ng-template>
             </td>
         </tr>
     </tbody>
 </table>
+
 <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</section>

@@ -1,4 +1,98 @@
-<div id="login-page" class="row">
+<section>
+    <div class="container">
+        <div class="box">
+            <h4 class="title is-4">iniciar Sesion</h4>
+            <form [formGroup]="fgValidation" (ngSubmit)="loginEvent()">
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="validate" formControlName="username" id="username" class="input" type="email">
+                    </div>
+                    <p *ngIf="fg.username.errors && (fg.username.dirty || fg.username.touched)" class="help is-danger">
+                        This email is invalid
+                    </p>
+                </div>
+                <div class="field">
+                    <label class="label">Contraseña</label>
+                    <div class="control">
+                        <input formControlName="password" id="password" class="input" type="password" />
+                    </div>
+                    <p *ngIf="fg.password.errors && (fg.password.dirty || fg.password.touched)" class="help is-danger">
+                        This password is invalid
+                    </p>
+                </div>
+                <div class="field">
+                    <div class="control has-text-centered">
+                        <button  class="button is-success" [disabled]="fg.username.errors || fg.password.errors" type="submit">
+                            iniciar Sesion
+                        </button>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-text-centered">
+                      <a routerLink="[/recover-password]">¿Olvidaste tu contraseña?</a>
+                    </div>
+                  </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- STARS -->
+
+    <div class="night">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="login-page" class="row">
     <div class="col s12 z-depth-6 card-panel">
         <form [formGroup]="fgValidation" (ngSubmit)="loginEvent()" class="login-form">
             <div class="row">
@@ -58,4 +152,4 @@
             </div>
         </form>
     </div>
-</div>
+</div> -->

@@ -8,7 +8,7 @@ import { FormGroup, FormControl, Validators, FormBuilder,ReactiveFormsModule } f
 @Component({
   selector: 'app-player-creator',
   templateUrl: './player-creator.component.html',
-  styleUrls: ['./player-creator.component.css']
+  styleUrls: ['./player-creator.component.scss']
 })
 export class PlayerCreatorComponent implements OnInit {
 
@@ -138,6 +138,13 @@ get rol(){
       rol: this.rol.value,
     }
     return player;
+  }
+
+  sendEmail():void{
+    let player =this.buildPlayerData();
+    this.plyService.SendEmail(player).subscribe(item =>{
+      alert("mensaje enviado");
+    })
   }
 
 }

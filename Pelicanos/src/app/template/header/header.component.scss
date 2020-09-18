@@ -1,0 +1,25 @@
+@media screen and (min-width: 768px) {
+  .navbar-item {
+    color: beige;
+
+    h3 {
+      color: rgb(22, 22, 12);
+    }
+  }
+}
+
+.navbar {
+  background-color: transparent;
+  background-image: none;
+  position: fixed;
+  width: 100vw;
+}
+
+.navbar-brand {
+  opacity: 1;
+  transition: opacity 1s ease;
+
+  &.is-hidden-brand {
+    opacity: 0;
+  }
+}

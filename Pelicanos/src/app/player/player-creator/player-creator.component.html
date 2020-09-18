@@ -1,134 +1,162 @@
-<form [formGroup]="playerFormGroup" (ngSubmit)="saveNewPlayer()">
-    <div class="row">
-        <div class="row">
-            <div class="input-fiel col s4">
-                <input formControlName="name" id="name" type="text" class="validate">
-                <label for="name">Nombre</label>
-                <div class="errorContainer" *ngIf="(name.touched || name.dirty) && name.invalid">
-                    <div class="card-panel white">
-                        Este campo es requerido!!
+<section>
+    <div class="container">
+        <div class="box">
+            <h4 class="title is-4">Jugador</h4>
+            <form [formGroup]="playerFormGroup" (ngSubmit)="saveNewPlayer()" class="columns is-multiline">
+                <div class="column is-6 field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input formControlName="name" id="name" name="name" class="input" type="text"/>
                     </div>
-                    <div class="card-panel white">
-                        Este campo como minimo debe tener 4 caracteres de longitud!!
-                    </div>
-                    <div class="card-panel white">
-                        Este campo como maximo debe tener 25 caracteres de longitud!!
-                    </div>
+                    <p *ngIf="(name.touched || name.dirty) && name.invalid">
+                        You must enter the Nombre
+                    </p>
                 </div>
-            </div>
-            <div class="input-fiel col s4">
-                <input formControlName="lastname" id="lastname" type="text" class="validate">
-                <label for="lastname">Apellido</label>
-                <div class="errorContainer" *ngIf="(lastname.touched || lastname.dirty) && lastname.invalid">
-                    <div class="card-panel white">
-                        Este campo es requerido!!
+                <div class="column is-6 field">
+                    <label class="label">Apellido</label>
+                    <div class="control">
+                        <input formControlName="lastname" id="lastname" name="lastname" class="input" type="text"/>
                     </div>
-                    <div class="card-panel white">
-                        Este campo como minimo debe tener 4 caracteres de longitud!!
-                    </div>
-                    <div class="card-panel white">
-                        Este campo como maximo debe tener 25 caracteres de longitud!!
-                    </div>
+                    <p *ngIf="(lastname.touched || lastname.dirty) && lastname.invalid">
+                        You must enter an apellido
+                    </p>
                 </div>
-            </div>
-            <div class="input-fiel col s4">
-                <input formControlName="code" id="code" type="text" class="validate">
-                <label for="code">Cedula</label>
-                <div class="errorContainer" *ngIf="(code.touched || code.dirty) && code.invalid">
-                    <div class="card-panel white">
-                        Este campo es requerido!!
+                <div class="column is-6 field">
+                    <label class="label">Cedula</label>
+                    <div class="control">
+                        <input formControlName="code" id="code" name="code" class="input" type="text"/>
                     </div>
-                    <div class="card-panel white">
-                        Este campo como minimo debe tener 8 caracteres de longitud!!
-                    </div>
-                    <div class="card-panel white">
-                        Este campo como maximo debe tener 12 caracteres de longitud!!
-                    </div>
+                    <p *ngIf="(code.touched || code.dirty) && code.invalid">
+                        You must enter the cedula
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-fiel col s4">
-                <input formControlName="email" id="email" type="text" class="validate">
-                <label for="email">Email</label>
-                <div class="errorContainer" *ngIf="(email.touched || email.dirty) && email.invalid">
-                    <div class="card-panel white">
-                        Este campo es requerido!!
+                <div class="column is-6 field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input formControlName="email" id="email" name="email" class="input" type="text"/>
                     </div>
-                    <div class="card-panel white">
-                        Este campo como minimo debe tener 4 caracteres de longitud!!
-                    </div>
-                    <div class="card-panel white">
-                        Este campo como maximo debe tener 35 caracteres de longitud!!
-                    </div>
+                    <p *ngIf="(email.touched || email.dirty) && email.invalid">
+                        You must enter an email
+                    </p>
                 </div>
-            </div>
-            <div class="input-fiel col s4">
-                <input formControlName="rol" id="rol" type="text" class="validate">
-                <label for="rol">Rol</label>
-            </div>
-            <div class="input-fiel col s4">
-                <input formControlName="phone" id="phone" type="text" class="validate">
-                <label for="phone">Telefono</label>
-                <div class="errorContainer" *ngIf="(phone.touched || phone.dirty) && phone.invalid">
-                    <div class="card-panel white">
-                        Este campo es requerido!!
+                <div class="column is-6 field">
+                    <label class="label">Rol</label>
+                    <div class="control">
+                        <input formControlName="rol" id="rol" name="rol" class="input" type="text"/>
                     </div>
-                    <div class="card-panel white">
-                        Este campo como minimo debe tener 8 caracteres de longitud!!
-                    </div>
-                    <div class="card-panel white">
-                        Este campo como maximo debe tener 14 caracteres de longitud!!
-                    </div>
+                    <p *ngIf="(rol.touched || rol.dirty) && rol.invalid">
+                        You must enter an rol
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-fiel col s3">
-                <input formControlName="age" id="age" type="text" class="validate">
-                <label for="age">Edad</label>
-                <div class="errorContainer" *ngIf="(age.touched || age.dirty) && age.invalid">
-                    <div class="card-panel white">
-                        Este campo es requerido!!
+                <div class="column is-6 field">
+                    <label class="label">Telefono</label>
+                    <div class="control">
+                        <input formControlName="phone" id="phone" name="phone" class="input" type="text"/>
                     </div>
-                    <div class="card-panel white">
-                        Este campo como maximo debe tener 3 caracteres de longitud!!
-                    </div>
+                    <p *ngIf="(phone.touched || phone.dirty) && phone.invalid">
+                        You must enter the Telefono
+                    </p>
                 </div>
-            </div>
-            <div class="input-fiel col s3">
-                <input formControlName="weigth" id="weigth" type="text" class="validate">
-                <label for="weigth">Peso</label>
-            </div>
-            <div class="input-fiel col s3">
-                <input formControlName="height" id="height" type="text" class="validate">
-                <label for="height">Estatura</label>
-            </div>
-            <div class="input-fiel col s3">
-                <input formControlName="titles" id="titles" type="text" class="validate">
-                <label for="titles">Titulos deportivos</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-fiel col s4">
-                <input formControlName="strengths" id="strengths" type="text" class="validate">
-                <label for="strengths">Fortalezas</label>
-            </div>
-            <div class="input-fiel col s4">
-                <input formControlName="link" id="link" type="text" class="validate">
-                <label for="link">Red Social(Link)</label>
-            </div>
-            <div class="input-fiel col s4">
-                <input formControlName="image" id="image" type="text" class="validate">
-                <label for="image">Foto (link)</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <button class="waves-effect waves-ligth btn green" type="submit">
-                    <i class="material-icons right">save</i>
-                    Guardar</button>
-            </div>
+                <div class="column is-6 field">
+                    <label class="label">Age</label>
+                    <div class="control">
+                        <input formControlName="age" id="age" name="age" class="input" type="text"/>
+                    </div>
+                    <p *ngIf="(age.touched || age.dirty) && age.invalid">
+                        You must enter an age
+                    </p>
+                </div>
+                <div class="column is-6 field">
+                    <label class="label">Peso</label>
+                    <div class="control">
+                        <input formControlName="weigth" id="weigth" name="weigth" class="input" type="text"/>
+                    </div>
+                    <p *ngIf="(weigth.touched || weigth.dirty) && weigth.invalid">
+                        You must enter an peso
+                    </p>
+                </div>
+                <div class="column is-6 field">
+                    <label class="label">Estatura</label>
+                    <div class="control">
+                        <input formControlName="height" id="height" name="height" class="input" type="text"/>
+                    </div>
+                    <p *ngIf="(height.touched || height.dirty) && height.invalid">
+                        You must enter the estatura
+                    </p>
+                </div>
+                <div class="column is-6 field">
+                    <label class="label">Fortalezas</label>
+                    <div class="control">
+                        <input formControlName="strengths" id="strengths" name="strengths" class="input" type="text"/>
+                    </div>
+                    <p *ngIf="(strengths.touched || strengths.dirty) && strengths.invalid">
+                        You must enter an Fortalezas
+                    </p>
+                </div><div class="column is-6 field">
+                    <label class="label">Red Social</label>
+                    <div class="control">
+                        <input formControlName="link" id="link" name="link" class="input" type="text"/>
+                    </div>
+                    <p *ngIf="(link.touched || link.dirty) && link.invalid">
+                        You must enter an red social
+                    </p>
+                </div>
+                <div class="column is-6 field">
+                    <label class="label">imagen</label>
+                    <div class="control">
+                        <input formControlName="image" id="image" name="image" class="input" type="text"/>
+                    </div>
+                    <p *ngIf="(image.touched || image.dirty) && image.invalid">
+                        You must enter the imagen
+                    </p>
+                </div>
+               
+                
+          
+                <div class="field column is-12 has-text-centered">
+                    <button class="button is-success" type="submit">
+                        Guardar
+                    </button>
+                </div>
+                
+            </form>
         </div>
     </div>
-</form>
+
+    <!-- STARS -->
+
+    <div class="night">
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+    </div>
+</section>
+
+
+
+
+
