@@ -13,5 +13,6 @@ export interface PlayerModel{
     strengths:string;
     link:string;
     rol:string;
+    rh:string;
     
 }

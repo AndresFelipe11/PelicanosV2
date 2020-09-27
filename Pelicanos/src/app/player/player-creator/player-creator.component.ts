@@ -35,6 +35,7 @@ export class PlayerCreatorComponent implements OnInit {
     strengths:new FormControl(''),
     link:new FormControl(''),
     rol:new FormControl(''),
+    rh:new FormControl(''),
 
   });
   }
@@ -97,6 +98,9 @@ get link(){
 get rol(){
   return this.playerFormGroup.get('rol');
 }
+get rh(){
+  return this,this.playerFormGroup.get('rh');
+}
 
   ngOnInit() {
   }
@@ -136,6 +140,7 @@ get rol(){
       strengths: this.strengths.value,
       link: this.link.value,
       rol: this.rol.value,
+      rh: this.rh.value,
     }
     return player;
   }

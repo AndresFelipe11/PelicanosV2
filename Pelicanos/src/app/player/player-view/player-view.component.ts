@@ -7,7 +7,7 @@ import { PlayerModel } from 'src/app/models/player.model';
 @Component({
   selector: 'app-player-view',
   templateUrl: './player-view.component.html',
-  styleUrls: ['./player-view.component.css']
+  styleUrls: ['./player-view.component.scss']
 })
 export class PlayerViewComponent implements OnInit {
 

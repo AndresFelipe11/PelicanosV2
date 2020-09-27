@@ -58,6 +58,10 @@
     "rol": {
       "type": "string",
       "required": false
+    },
+    "rh": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],

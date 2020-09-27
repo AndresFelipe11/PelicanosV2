@@ -1,4 +1,66 @@
+<section>
+  <h1 class="heading">Nuestros Jugadores
+  </h1>
+  <div class="container">
+    <div class="columns is-multiline">
+      <div *ngFor="let p of PlayerList" class="column is-3">
+        <div class="card is-slightly-rounded">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="{{p.image}}" alt="" class="is-slightly-rounded">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="title is-4 is-capitalized">
+                {{p.name | uppercase}} {{p.lastname | uppercase}}
+              </p>
+              <p class="venue-data-sm">
+                Email: {{p.email}}
+              </p>
+              <p class="venue-data-sm">
+                Rol: {{p.rol}}
+              </p>
+              <p class="venue-data-sm">
+                Telefono: {{p.phone}}
+              </p>
+              <p class="venue-data-sm">
+                Edad: {{p.age}}
+              </p>
+              <p class="venue-data-sm">
+                Peso: {{p.weigth}}
+              </p>
+              <p class="venue-data-sm">
+                Estatura: {{p.height}}
+              </p>
+              <p class="venue-data-sm">
+                Titulos: {{p.titles}}
+              </p>
+              <p class="venue-data-sm">
+                Fortalezas: {{p.strengths}}
+              </p>
+              <p class="venue-data-sm">
+                Link: <a href="{{p.link}}"></a>
+              </p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+
+
+
+
+
+
+
+
+<!-- 
 <div class="row s12">
   <div *ngFor="let p of PlayerList" class="card col s4">
     <div class="card-image waves-effect waves-block waves-light">
@@ -42,4 +104,4 @@
       </p>
     </div>
   </div>
-</div>
+</div> -->
