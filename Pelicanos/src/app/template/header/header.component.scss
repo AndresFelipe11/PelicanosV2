@@ -1,16 +1,19 @@
 @media screen and (min-width: 768px) {
   .navbar-item {
-    color: beige;
+    color: black;
+    border: none;
+    text-decoration: none;
 
     h3 {
-      color: rgb(22, 22, 12);
+      color: rgb(26, 24, 24);
     }
   }
 }
 
 .navbar {
-  background-color: transparent;
-  background-image: none;
+  background-color: rgb(255, 230, 0);
+  box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 15px;
   position: fixed;
   width: 100vw;
 }
@@ -23,3 +26,6 @@
     opacity: 0;
   }
 }
+
+
+

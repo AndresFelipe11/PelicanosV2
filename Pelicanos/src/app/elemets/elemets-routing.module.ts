@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DonationsComponent } from './donations/donations.component';
 import { HistoryComponent } from './history/history.component';
+import { WhoAreComponent } from './who-are/who-are.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,11 @@ const routes: Routes = [
   {
     path:'elements/donations',
     component: DonationsComponent
+  },
+
+  {
+    path:'elements/who-are',
+    component: WhoAreComponent
   }
 ];
 

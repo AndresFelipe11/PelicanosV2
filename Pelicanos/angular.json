@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Pelicanos"
+  "defaultProject": "Pelicanos",
+  "cli": {
+    "analytics": false
+  }
 }

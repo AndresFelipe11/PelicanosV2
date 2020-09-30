@@ -1,44 +1,136 @@
-.title {
-    color: black;
+#bgvid
+{
+ filter: brightness(0.4); 
+ 
+}
+  .title {
+    color: white;
+    font-size: 90px;
+    
   }
   .subtitle {
-    color: black;
+    color: white;
+    font-size: 30px;
+  }
+
+  .title, .subtitle
+  {
+    z-index: 1;
   }
   .hero {
     color: #eeeeee;
   }
   
   #title {
-    color: black;
+    color: white;;
   }
   
   #subtitle {
-    color: black;
+    color:white;
   }
   
   .hero.video {
     background-image: url("../../../assets/image/4.jpg");
+    filter: brightness(0.7);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    z-index: -1;
   
-  .hero-body.main-hero {
-    color: #363636;
+  } 
+ .hero-body.main-hero {
+    
   
     h1,
     h2 {
-      color: #363636;
+      color: white;
     }
   }
-  
+
+  .bttwh button
+  {
+    border: none;
+    background-color: rgb(20, 6, 214);
+    color: white;
+    font-size: 40px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 90px;
+    cursor: pointer;
+    
+  }
+  @media screen and (min-width: 360px){
+   .hero.hero.video
+    {
+
+      filter: brightness(1);
+    }
+    .hero-body.main-hero
+    {
+      
+      .title{
+        z-index: 1;
+        font-size: 40px;
+        filter: brightness(1);
+      }
+      .subtitle{
+        z-index: 1;
+        font-size: 20px;
+      }
+    }
+    .bttwh
+    {
+      text-align: center;
+    }
+    .bttwh button
+    {
+      font-size: 30px;
+      
+    }
+    }
+
   @media screen and (min-width: 768px) {
+    .hero.hero.video
+    {
+      filter: brightness(1);
+    }
     .hero-body.main-hero {
-      color: rgb(88, 88, 80);
+      color: white;
+      .title{
+        font-size: 120px;
+      }
+      .subtitle{
+        font-size: 30px;
+      }
+    
   
       h1,
       h2 {
-        color: rgb(88, 88, 80);
+        color: white;
       }
     }
+    .bttwh
+    {
+      text-align: left;
+    }
+    .bttwh button
+    {
+      border: none;
+      background-color: rgb(20, 6, 214);
+      color: white;
+      font-size: 40px;
+      width: 300px;
+      padding: 5px;
+      border-radius: 90px;
+      cursor: pointer;
+      
+      
+    }
+    .bttwh button:hover
+    {
+      background-color: rgb(47, 34, 235);
+    }
+   
   }
+
+ 

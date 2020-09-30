@@ -4,7 +4,7 @@
 
 
 <br/>
-<a class="button is-primary" href="/player/creator">Añadir nuevo jugador</a>
+<a class="button is-link" href="/player/creator">Añadir nuevo jugador</a>
 <br/>
 <table class="table is-striped is-fullwidth">
     <thead>
@@ -96,7 +96,7 @@
                 {{p.link}}
             </td>
             <td>
-                <a class="button is-primary" href="/player/editor/{{p.id}}">
+                <a class="button is-link" href="/player/editor/{{p.id}}">
                     Editar
                 </a>
             </td>
@@ -107,7 +107,7 @@
                     <div *ngIf="idToShowButtons == p.id">
                         <button class="button is-danger" (click)="deletePlayer(p.id)">
                             Eliminar</button>&nbsp;
-                            <button class="button is-success" (click)="ChangeConfirmationButtons('')">
+                            <button class="button is-link" (click)="ChangeConfirmationButtons('')">
                                Cancelar</button>
                     </div>
                    </ng-template>

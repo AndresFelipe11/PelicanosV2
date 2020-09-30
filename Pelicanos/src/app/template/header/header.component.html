@@ -15,13 +15,13 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="navbar-item button is-success is-outlined" *ngIf="!userLogged" routerLink="/user/register" routerLinkActive="is-active">
+          <a class="navbar-item button is-link is-outlined" *ngIf="!userLogged" routerLink="/user/register" routerLinkActive="is-active">
             <strong>Registrarse</strong>
           </a>
-          <a class="navbar-item button is-primary is-outlined" *ngIf="!userLogged" routerLink="/user/login" routerLinkActive="is-active">
+          <a class="navbar-item button is-link is-outlined" *ngIf="!userLogged" routerLink="/user/login" routerLinkActive="is-active">
             Iniciar Sesión
           </a>
-          <a class="navbar-item" *ngIf="userLogged" routerLink="/user/logout" routerLinkActive="is-active">
+          <a class="navbar-item " *ngIf="userLogged" routerLink="/user/logout" routerLinkActive="is-active">
             Cerrar Sesión
           </a>
           <div class="buttons" *ngIf="userLogged">
