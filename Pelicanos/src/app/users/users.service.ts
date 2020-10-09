@@ -52,6 +52,7 @@ export class UserService {
     });
   }
 
+
  saveUserInformation(user: UserModel): void {
    user.isLogged=true;
    this.userInfo.next(user);
@@ -79,8 +80,6 @@ export class UserService {
   getToken() {
     return localStorage.getItem("userTk");
   }
-
- 
 
   getUserInformation() {
     let userInfo = localStorage.getItem("userInfo");

@@ -6,13 +6,17 @@ import { PlayerEditorComponent } from './player-editor/player-editor.component';
 import { PlayerCreatorComponent } from './player-creator/player-creator.component';
 import { PlayerViewComponent } from './player-view/player-view.component';
 import { UrlInjectionGuard } from '../guards/url-injection.guard';
+import { UserGuard } from '../guards/user.guard';
+import { UserService } from '../users/users.service';
 
 const routes: Routes = [
   {
     path: 'player/list',
     component: PlayerListComponent,
     canActivate:[
-      UrlInjectionGuard
+      UrlInjectionGuard,
+      UserGuard
+      
     ]
   }, 
   {
@@ -28,14 +32,16 @@ const routes: Routes = [
     path: 'player/creator',
     component: PlayerCreatorComponent,
     canActivate:[
-      UrlInjectionGuard
+      UrlInjectionGuard,
+      UserGuard
     ]
   },
   {
     path: 'player/editor/:id',
     component: PlayerEditorComponent,
     canActivate:[
-      UrlInjectionGuard
+      UrlInjectionGuard,
+      UserGuard
     ]
   }
 ];

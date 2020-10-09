@@ -22,6 +22,7 @@
     "bulma": "^0.9.0",
     "ngx-pagination": "^5.0.0",
     "rxjs": "~6.5.5",
+    "sweetalert2": "^10.3.7",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },

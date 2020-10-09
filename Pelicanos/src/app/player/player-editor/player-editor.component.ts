@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlayerService } from '../player.service';
 import { PlayerModel } from 'src/app/models/player.model';
+import Swal from 'sweetalert2';
 
 declare const showUpdatedMessageModal: any;
 
@@ -36,7 +37,7 @@ export class PlayerEditorComponent implements OnInit {
 
   updatePlayer(){
     this.PlyService.updatePlayer(this.player).subscribe(item =>{
-      alert("El jugador a sido Actualizado correctamente");
+      Swal.fire("El jugador a sido Actualizado correctamente");
     });
 
     this.router.navigate(["/player/list"]);

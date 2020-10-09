@@ -5,7 +5,7 @@ module.exports = function(Player) {
     Player.sendEmail=(message, subject ,emailAddresses, cb)=>{
         Player.app.models.Email.send({
             to: emailAddresses,
-            from: "James Bond - 007",
+            from: "Pelicanos Beach Voley",
             subject: subject,
             text: message,
             html: message
@@ -20,7 +20,7 @@ module.exports = function(Player) {
     {
        
         http: {
-            path: '/sendEmail', verb: 'get'
+            path: '/sendEmail', verb: 'post'
         },
         description: [
             "Api to send email messages."
@@ -42,7 +42,7 @@ module.exports = function(Player) {
                 required: true
             }
         ],
-        returns: { arg: 'Email', type: 'string' }
+        returns: { arg: 'reponse', type: 'string' }
     });
   };
 

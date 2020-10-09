@@ -54,8 +54,8 @@ export class PlayerService {
     return this.data;
   }
 
-  SendEmail(player :PlayerModel):Observable<PlayerModel>{
-    return this.http.get<PlayerModel>(`${base_url}Players/sendEmail`);
+  SendEmail(message,subject,emailAddresses):Observable<PlayerModel>{
+    return this.http.post<PlayerModel>(`${base_url}Players/sendEmail`,{message,subject,emailAddresses});
   }
 
   

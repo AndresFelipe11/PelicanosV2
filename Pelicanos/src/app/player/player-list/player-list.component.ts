@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵSWITCH_ELEMENT_REF_FACTORY__POST_R3__, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core';
 import { PlayerService } from '../player.service';
 import { Router } from '@angular/router';
 import { PlayerModel } from 'src/app/models/player.model';
+import Swal from 'sweetalert2';
 
 
 
@@ -36,7 +37,7 @@ export class PlayerListComponent implements OnInit {
 
     deletePlayer(playerId:string):void{
     this.plrSevice.deletePlayer(playerId).subscribe(item => {
-      console.log(item);
+      Swal.fire('El jugador a sido Eliminado Correctamente');
       this.route.navigate(["/player/view"])
      } )}
 

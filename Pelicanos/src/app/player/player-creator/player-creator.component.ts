@@ -3,6 +3,7 @@ import { PlayerModel } from 'src/app/models/player.model';
 import { PlayerService } from '../player.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder,ReactiveFormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -110,7 +111,7 @@ get rh(){
     if(this.playerFormGroup.valid){
       let player= this.buildPlayerData();
         this.plyService.saveNewPlayer(player).subscribe(item => {
-       alert("El jugador a sido guardado exitosamente!!!");
+       Swal.fire("El jugador a sido guardado exitosamente!!!");
       this.router.navigate(["/player/view"]);
 
      });
@@ -118,7 +119,10 @@ get rh(){
     console.log("saved");
     }
     else{
-      console.log("the form is invalid")
+      Swal.fire(
+        'Error!',
+        'Por favor verifica que todos los campos sean correctos',
+        'error');
     }
 
    
@@ -145,11 +149,6 @@ get rh(){
     return player;
   }
 
-  sendEmail():void{
-    let player =this.buildPlayerData();
-    this.plyService.SendEmail(player).subscribe(item =>{
-      alert("mensaje enviado");
-    })
-  }
+  
 
 }

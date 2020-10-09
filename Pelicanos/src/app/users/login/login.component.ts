@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../users.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpErrorResponse, HttpHeaderResponse } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -31,21 +33,28 @@ export class LoginComponent implements OnInit {
 
   loginEvent(){
     if(this.fgValidation.invalid){
-      alert("Invalid data.");
+      Swal.fire(
+        'Error!',
+        'Por favor verifica que todos los campos sean correctos',
+        'error');
     }else{
       let u = this.fg.username.value;
       let p = this.fg.password.value;
       let user = null;
       this.userService.loginUser(u,p).subscribe(data =>{
         if(data != null){
-          console.log(user);
           this.userService.saveUserInformation(data);
           this.userService.saveToken(data.id);
           this.router.navigate(['/home']);
-        }else{
-          alert("the data is not valid")
-        }
-      })
+        }       
+      },(error)=>{
+
+        Swal.fire(
+          'Error!',
+          'Las credenciales ingresadas no son correctas',
+          'error');
+
+      });
       
     }
   }

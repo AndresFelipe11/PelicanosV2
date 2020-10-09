@@ -3,6 +3,8 @@ import { UserService } from '../users.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserModel } from 'src/app/models/user.model';
+import { PlayerService } from 'src/app/player/player.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -14,8 +16,9 @@ export class RegisterComponent implements OnInit {
 
 
   userFormGroup: FormGroup;
+  
 
-  constructor(private fb: FormBuilder, private UsrService: UserService, private router: Router) {
+  constructor(private fb: FormBuilder, private UsrService: UserService, private router: Router, private PlayerService: PlayerService) {
     this.userFormGroup=this.formGroupCreator();
    }
 
@@ -69,17 +72,27 @@ get isLogged(){
     if(this.userFormGroup.valid){
       let user= this.buildUserData();
         this.UsrService.saveNewUser(user).subscribe(item => {
-       alert("El usuario a sido guardado exitosamente!!!");
+        this.SendEmail();
+       Swal.fire("El usuario a sido guardado exitosamente!!!");
       this.router.navigate(["/user/login"]);
-
      });
-
     }
     else{
-      alert("the form is invalid");
+      Swal.fire(
+        'Error!',
+        'Por favor verifica que todos los campos sean correctos',
+        'error');
     }
 
    
+  }
+
+  SendEmail(){
+    let player = this.PlayerService.SendEmail('Hola '+this.realm.value+ 
+    ' bienvenido al club pelicanos con el correo y contraseña que te registraste puedes ingresar a la pagina web',
+    'Pelicanos Voley Club',this.email.value).subscribe(item =>{
+      console.log("email enviado");
+    });
   }
 
   buildUserData():UserModel{

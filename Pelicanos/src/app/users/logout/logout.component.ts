@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../users.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-logout',
@@ -18,6 +19,7 @@ export class LogoutComponent implements OnInit {
 
 logoutUser():void{
   this.userService.logoutUser();
+  Swal.fire('Cerraste sesión correctamente')
   this.router.navigate(["/home"]);
 }
 

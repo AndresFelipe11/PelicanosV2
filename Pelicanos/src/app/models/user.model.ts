@@ -7,5 +7,4 @@ export class UserModel{
     rol: number;
     user: UserModel;
     isLogged:boolean = false;
-
 }
