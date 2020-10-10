@@ -37,7 +37,7 @@ export class PlayerListComponent implements OnInit {
 
     deletePlayer(playerId:string):void{
     this.plrSevice.deletePlayer(playerId).subscribe(item => {
-      Swal.fire('El jugador a sido Eliminado Correctamente');
+      Swal.fire('El jugador ha sido eliminado correctamente');
       this.route.navigate(["/player/view"])
      } )}
 

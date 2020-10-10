@@ -111,7 +111,7 @@ get rh(){
     if(this.playerFormGroup.valid){
       let player= this.buildPlayerData();
         this.plyService.saveNewPlayer(player).subscribe(item => {
-       Swal.fire("El jugador a sido guardado exitosamente!!!");
+       Swal.fire("El jugador ha sido guardado exitosamente");
       this.router.navigate(["/player/view"]);
 
      });

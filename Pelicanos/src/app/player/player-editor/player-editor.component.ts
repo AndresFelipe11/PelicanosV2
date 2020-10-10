@@ -37,7 +37,7 @@ export class PlayerEditorComponent implements OnInit {
 
   updatePlayer(){
     this.PlyService.updatePlayer(this.player).subscribe(item =>{
-      Swal.fire("El jugador a sido Actualizado correctamente");
+      Swal.fire("El jugador ha sido actualizado correctamente");
     });
 
     this.router.navigate(["/player/list"]);
