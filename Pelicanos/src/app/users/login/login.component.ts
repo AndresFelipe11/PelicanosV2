@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.fgValidationBuilder();
   }
+  
 
   fgValidationBuilder() {
     this.fgValidation = this.fb.group({
@@ -30,6 +31,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(15)]]
     });
   }
+
 
   loginEvent(){
     if(this.fgValidation.invalid){
@@ -53,7 +55,6 @@ export class LoginComponent implements OnInit {
           'Error!',
           'Las credenciales ingresadas no son correctas',
           'error');
-
       });
       
     }

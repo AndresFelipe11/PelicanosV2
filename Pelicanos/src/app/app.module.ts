@@ -11,6 +11,7 @@ import { RegisterComponent } from './users/register/register.component';
 import { HeroComponent } from './template/hero/hero.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResetComponent } from './users/reset/reset.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LogoutComponent,
     RegisterComponent,
     HeroComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

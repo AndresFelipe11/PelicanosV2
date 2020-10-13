@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports:[
     RegisterComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    ResetComponent
   ]
 })
 export class UsersModule { }

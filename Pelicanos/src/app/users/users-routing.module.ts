@@ -5,6 +5,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { LoginComponent } from './login/login.component';
 import { FormLoginGuard } from '../guards/form-login.guard';
 import { UrlInjectionGuard } from '../guards/url-injection.guard';
+import { ResetComponent } from './reset/reset.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
     canActivate:[
       UrlInjectionGuard
     ]
+  },
+  {
+    path: 'user/reset',
+    component: ResetComponent,
   },
   {
     path: 'user/login',
