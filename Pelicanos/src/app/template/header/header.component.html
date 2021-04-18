@@ -1,5 +1,4 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <strong *ngIf="userLogged"></strong>
   <div class="navbar-brand">
     <a class="navbar-item" routerLink="/">
       <h3 class="title is-3">PELICANOS</h3>
@@ -21,13 +20,14 @@
           <a class="navbar-item button is-link is-outlined" *ngIf="!userLogged" routerLink="/user/login" routerLinkActive="is-active">
             Iniciar Sesión
           </a>
-          <a class="navbar-item " *ngIf="userLogged" routerLink="/user/logout" routerLinkActive="is-active">
+          <div class="navbar-item" *ngIf="userLogged">
+            <a routerLink="/player/list" class="navbar-item">Lista Jugadores</a>
+            <a routerLink="/player/view" class="navbar-item">Jugadores</a>
+          </div> 
+          <a class="navbar-item" *ngIf="userLogged" routerLink="/user/logout" routerLinkActive="is-active">
             Cerrar Sesión
           </a>
-          <div class="buttons" *ngIf="userLogged">
-            <a routerLink="/player/list" class="navbar-item nuxt-link-exact-active nuxt-link-active ">Lista Jugadores</a>
-            <a routerLink="/player/view" class="navbar-item">Jugadores</a>
-          </div>         
+                  
         </div>
       </div>
     </div>

@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   userName: String;
   CompleteName: string='';
   subscription:Subscription;
+  userRol:boolean=false;
 
   constructor(private userService: UserService) { }
   
@@ -35,6 +36,7 @@ export class HeaderComponent implements OnInit {
     let msg = "In session: ";
     this.userLogged = this.userInfo.isLogged;
     this.userName = `${msg} ${this.userInfo.realm}`;
+    this.userRol=this.userInfo.isAdmin;
   }
 
   showMenu():void{
@@ -43,9 +45,14 @@ export class HeaderComponent implements OnInit {
       this.userLogged=false
 
     }
+
     else{
+      if(userInfo.user.rol==2){
+        this.userRol=true;
+      }
       this.userLogged= true;
      this.CompleteName=userInfo.realm;
+     console.log(userInfo);
     }
   }
 

@@ -62,6 +62,9 @@ get user(){
 get isLogged(){
   return this.userFormGroup.get('isLogged');
 }
+get isAdmin(){
+  return this.userFormGroup.get('isAdmin');
+}
 
 
   ngOnInit() {
@@ -105,6 +108,7 @@ get isLogged(){
       rol: 1,
       user: null,
       isLogged: true,
+      isAdmin:true,
     }
     return user;
   }

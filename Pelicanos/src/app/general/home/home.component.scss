@@ -1,6 +1,7 @@
 #bgvid
 {
- filter: brightness(0.4); 
+ filter: brightness(0.3); 
+ margin-top: 0px;
  
 }
   .title {
@@ -30,7 +31,7 @@
   }
   
   .hero.video {
-    background-image: url("../../../assets/image/4.jpg");
+   
     filter: brightness(0.7);
     background-position: center;
     background-repeat: no-repeat;
@@ -132,5 +133,12 @@
     }
    
   }
+  @media screen and (max-width: 768px) {
 
+    .hero.video{
+      background-image: url("../../../assets/image/1.jpg");
+    
+
+    }
+  }
  

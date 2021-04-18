@@ -63,6 +63,12 @@ export class UserService {
   isActiveSession(){
    return this.userInfo.getValue().isLogged;
   }
+  isAdminSession(){
+    if(this.userInfo.getValue().rol== 2 ){
+      return false;
+    }
+    return true;
+   }
 
    tokenId: string = '';
 
@@ -96,7 +102,7 @@ export class UserService {
     return this.http.patch<UserModel>(`${base_url}Users/${user.id}?access_token=${this.token}`, user);
   }
 
-  //  saveUserInformation(user: UserModel): void {
+//  saveUserInformation(user: UserModel): void {
 //    user.isLogged=true;
 //    this.userInfo.next(user);
 //     localStorage.setItem("userInfo", JSON.stringify(user));
