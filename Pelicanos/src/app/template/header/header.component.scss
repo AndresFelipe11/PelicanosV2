@@ -14,7 +14,8 @@
   background-color: rgb(255, 230, 0);
   box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 15px;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100vw;
 }
 
