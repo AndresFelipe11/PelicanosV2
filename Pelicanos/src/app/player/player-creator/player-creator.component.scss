@@ -4,6 +4,7 @@ section {
     overflow: hidden;
     width: 100%;
     position: relative;
+    padding: 3rem 0;
   
     & > .container {
       min-height: calc(100vh - 52px);
@@ -12,9 +13,11 @@ section {
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      
   
       .box {
         z-index: 2;
+        
   
         button {
           margin-top: 1rem;
